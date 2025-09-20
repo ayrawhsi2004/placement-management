@@ -57,9 +57,9 @@ export class AppComponent {
     id: null as any,
     companyName: "",
     jobRole: "",
-    college: "",
-    salaryPackage: "",
-    driveDate: ""
+    placementDate: "",
+    
+    
   };
 
   edit(placement: any) {

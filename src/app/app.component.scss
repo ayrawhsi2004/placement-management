@@ -1,0 +1,536 @@
+// ========================= VARIABLES ========================= //
+$primary:       #0d6efd;   // Brand primary color
+$danger:        #dc3545;   // Danger/alert color
+$surface-light: #ffffff;   // Card/table background
+$bg-light:      #f5f6fa;   // Page background
+$text-dark:     #333;
+$border-radius: 10px;
+$shadow:        0 6px 18px rgba(0, 0, 0, 0.1);
+
+// ========================= GLOBAL PAGE ========================= //
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: $bg-light;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $text-dark;
+}
+
+// ========================= FORM CARD ========================= //
+.shadow {
+  background: $surface-light;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  padding: 2rem;
+  max-width: 380px;
+  width: 90%;
+}
+
+// ========================= FORM ========================= //
+form {
+  margin: auto;
+
+  h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: $text-dark;
+    text-align: center;
+  }
+
+  label {
+    font-weight: 500;
+    color: darken($text-dark, 10%);
+    margin-bottom: 0.3rem;
+    display: inline-block;
+  }
+
+  input.form-control {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 4px rgba($primary, 0.3);
+      outline: none;
+    }
+  }
+
+  .btn-primary {
+    background-color: $primary;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken($primary, 8%);
+    }
+  }
+}
+
+// ========================= TABLE ========================= //
+.table {
+  width: 90%;
+  margin: 3rem auto;
+  background: $surface-light;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+
+  th {
+    background: $primary;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  td {
+    text-align: center;
+    padding: 0.7rem;
+    vertical-align: middle;
+    border-color: #e9ecef;
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      background: #f8f9fa;
+    }
+
+    tr:hover {
+      background: lighten($primary, 46%);
+    }
+  }
+}
+
+// ========================= BUTTONS ========================= //
+.btn-danger {
+  background-color: $danger;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: darken($danger, 6%);
+  }
+}
+
+// ========================= MODAL ========================= //
+.modal-content {
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+
+  .modal-header {
+    background: $primary;
+    color: #fff;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+
+    .modal-title {
+      font-weight: 600;
+    }
+
+    .btn-close {
+      background: #fff;
+      opacity: 1;
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .modal-body {
+    padding-top: 1.5rem;
+
+    form {
+      width: 100%;
+
+      input.form-control {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// ========================= RESPONSIVE ========================= //
+@media (max-width: 576px) {
+  .table {
+    width: 100%;
+  }
+  .shadow {
+    padding: 1.5rem;
+  }
+}
+// ========================= VARIABLES ========================= //
+$primary:       #0d6efd;   // Brand primary
+$secondary:     #6f42c1;   // Secondary for gradient
+$danger:        #dc3545;
+$surface-light: #ffffff;
+$text-dark:     #333;
+$border-radius: 10px;
+$shadow:        0 6px 18px rgba(0, 0, 0, 0.1);
+
+// ========================= GLOBAL PAGE ========================= //
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $text-dark;
+
+  /* 🌈 Gradient Background */
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  background-attachment: fixed;
+}
+
+// ========================= FORM CARD ========================= //
+.shadow {
+  background: $surface-light;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  padding: 2rem;
+  max-width: 380px;
+  width: 90%;
+  margin: 2rem auto;
+
+  /* Optional subtle fade effect */
+  backdrop-filter: blur(4px);
+}
+
+// ========================= FORM ========================= //
+form {
+  h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: $text-dark;
+  }
+
+  label {
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: darken($text-dark, 10%);
+  }
+
+  input.form-control {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 6px rgba($primary, 0.3);
+      outline: none;
+    }
+  }
+
+  .btn-primary {
+    background-color: $primary;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      background-color: darken($primary, 8%);
+    }
+  }
+}
+
+// ========================= TABLE ========================= //
+.table {
+  width: 90%;
+  margin: 3rem auto;
+  background: $surface-light;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+
+  th {
+    background: linear-gradient(135deg, $primary, $secondary);
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  td {
+    text-align: center;
+    padding: 0.7rem;
+    border-color: #e9ecef;
+    vertical-align: middle;
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      background: #f8f9fa;
+    }
+
+    tr:hover {
+      background: lighten($primary, 45%);
+    }
+  }
+}
+
+// ========================= BUTTONS ========================= //
+.btn-danger {
+  background-color: $danger;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.25s ease;
+
+  &:hover {
+    background-color: darken($danger, 6%);
+  }
+}
+
+// ========================= MODAL ========================= //
+.modal-content {
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+
+  .modal-header {
+    background: linear-gradient(135deg, $primary, $secondary);
+    color: #fff;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+
+    .modal-title {
+      font-weight: 600;
+    }
+
+    .btn-close {
+      background: #fff;
+      opacity: 1;
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .modal-body {
+    padding-top: 1.5rem;
+
+    form input.form-control {
+      width: 100%;
+    }
+  }
+}
+
+// ========================= RESPONSIVE ========================= //
+@media (max-width: 576px) {
+  .table {
+    width: 100%;
+  }
+  .shadow {
+    padding: 1.5rem;
+  }
+}
+// ========================= VARIABLES ========================= //
+$primary:       #0d6efd;   // Brand primary
+$secondary:     #6f42c1;   // Secondary for gradient
+$danger:        #dc3545;
+$surface-light: #ffffff;
+$text-dark:     #333;
+$border-radius: 10px;
+$shadow:        0 6px 18px rgba(0, 0, 0, 0.1);
+
+// ========================= GLOBAL PAGE ========================= //
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $text-dark;
+
+  /* 🌈 Gradient Background */
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  background-attachment: fixed;
+}
+
+// ========================= FORM CARD ========================= //
+.shadow {
+  background: $surface-light;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  padding: 2rem;
+  max-width: 380px;
+  width: 90%;
+  margin: 2rem auto;
+
+  /* Optional subtle fade effect */
+  backdrop-filter: blur(4px);
+}
+
+// ========================= FORM ========================= //
+form {
+  h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: $text-dark;
+  }
+
+  label {
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: darken($text-dark, 10%);
+  }
+
+  input.form-control {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 6px rgba($primary, 0.3);
+      outline: none;
+    }
+  }
+
+  .btn-primary {
+    background-color: $primary;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      background-color: darken($primary, 8%);
+    }
+  }
+}
+
+// ========================= TABLE ========================= //
+.table {
+  width: 90%;
+  margin: 3rem auto;
+  background: $surface-light;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+
+  th {
+    background: linear-gradient(135deg, $primary, $secondary);
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  td {
+    text-align: center;
+    padding: 0.7rem;
+    border-color: #e9ecef;
+    vertical-align: middle;
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      background: #f8f9fa;
+    }
+
+    tr:hover {
+      background: lighten($primary, 45%);
+    }
+  }
+}
+
+// ========================= BUTTONS ========================= //
+.btn-danger {
+  background-color: $danger;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.25s ease;
+
+  &:hover {
+    background-color: darken($danger, 6%);
+  }
+}
+
+// ========================= MODAL ========================= //
+.modal-content {
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+
+  .modal-header {
+    background: linear-gradient(135deg, $primary, $secondary);
+    color: #fff;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+
+    .modal-title {
+      font-weight: 600;
+    }
+
+    .btn-close {
+      background: #fff;
+      opacity: 1;
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .modal-body {
+    padding-top: 1.5rem;
+
+    form input.form-control {
+      width: 100%;
+    }
+  }
+}
+
+// ========================= RESPONSIVE ========================= //
+@media (max-width: 576px) {
+  .table {
+    width: 100%;
+  }
+  .shadow {
+    padding: 1.5rem;
+  }
+}body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;          // Ensures gradient covers full page
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  background-attachment: fixed; // Keeps gradient fixed while scrolling
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:host {
+  display: block;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #ea0b0b, #eadede);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

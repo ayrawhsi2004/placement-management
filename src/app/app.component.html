@@ -28,37 +28,18 @@
           </div><br>
           
           <div class="">
-            <label for="college">college</label>
+            <label for="placementDate">placementDate</label>
             <div class="">
-              <input id="college" required #college="ngModel" ngModel name="college" type="text"
-                class="form-control" placeholder="Enter college">
-              <div *ngIf="college.invalid && college.touched">
-                <small class="text-danger" *ngIf="college.errors?.['required']">Required</small>
+              <input id="placementDate" required #placementDate="ngModel" ngModel name="placementDate" type="date"
+                class="form-control" placeholder="Enter placementDate">
+              <div *ngIf="placementDate.invalid && placementDate.touched">
+                <small class="text-danger" *ngIf="placementDate.errors?.['required']">Required</small>
               </div>
             </div>
           </div><br>
 
-          <div class="">
-            <label for="salaryPackage">Salary Package</label>
-            <div class="">
-              <input id="salaryPackage" required #salaryPackage="ngModel" ngModel name="salaryPackage" type="text"
-                class="form-control" placeholder="Enter salary package">
-              <div *ngIf="salaryPackage.invalid && salaryPackage.touched">
-                <small class="text-danger" *ngIf="salaryPackage.errors?.['required']">Required</small>
-              </div>
-            </div>
-          </div><br>
 
-          <div class="">
-            <label for="driveDate">Drive Date</label>
-            <div class="">
-              <input id="driveDate" required #driveDate="ngModel" ngModel name="driveDate" type="date"
-                class="form-control" placeholder="Enter drive date">
-              <div *ngIf="driveDate.invalid && driveDate.touched">
-                <small class="text-danger" *ngIf="driveDate.errors?.['required']">Required</small>
-              </div>
-            </div>
-          </div><br>
+         
   
           <div class="form-group text-center">
             <input class="btn btn-primary" type="submit" value="Submit">
@@ -75,9 +56,7 @@
           <th>ID</th>
           <th>Company Name</th>
           <th>jobRole</th>
-          <th>College</th>
-          <th>Salary Package</th>
-          <th>Drive Date</th>
+          <th>placementDate</th>
           <th>Edit</th>
           <th>Delete</th>
         </tr>
@@ -87,9 +66,9 @@
           <td>{{placement.id}}</td>
           <td>{{placement.companyName}}</td>
           <td>{{placement.jobRole}}</td>
+          <td>{{placement.placementDate}}</td>
           <td>{{placement.college}}</td>
-          <td>{{placement.salaryPackage}}</td>
-          <td>{{placement.driveDate}}</td>
+          <td>{{placement.selectedStudents}}</td>
           <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="edit(placement)">Edit</button></td>
           <td><button type="button" class="btn btn-danger" (click)="deletePlacement(placement)">Delete</button></td>
         </tr>
@@ -132,38 +111,18 @@
             </div><br>
             
             <div class="">
-              <label for="college">college</label>
+              <label for="placementDate">placementDate</label>
               <div class="">
-                <input id="college" required #college="ngModel" [(ngModel)]="placementToUpdate.companyName" name="college" type="text"
+                <input id="placementDate" required #placementDate="ngModel" [(ngModel)]="placementToUpdate.placementDate" name="placementDate" type="text"
                   class="form-control" placeholder="Enter college">
-                <div *ngIf="college.invalid && college.touched">
-                  <small class="text-danger" *ngIf="college.errors?.['required']">Required</small>
+                <div *ngIf="placementDate.invalid && placementDate.touched">
+                  <small class="text-danger" *ngIf="placementDate.errors?.['required']">Required</small>
                 </div>
               </div>
             </div><br>
   
-            <div class="">
-              <label for="salaryPackage">Salary Package</label>
-              <div class="">
-                <input id="salaryPackage" required #salaryPackage="ngModel" [(ngModel)]="placementToUpdate.salaryPackage" name="salaryPackage" type="text"
-                  class="form-control" placeholder="Enter salary package">
-                <div *ngIf="salaryPackage.invalid && salaryPackage.touched">
-                  <small class="text-danger" *ngIf="salaryPackage.errors?.['required']">Required</small>
-                </div>
-              </div>
-            </div><br>
-
-            <div class="">
-              <label for="driveDate">Drive Date</label>
-              <div class="">
-                <input id="driveDate" required #driveDate="ngModel" [(ngModel)]="placementToUpdate.driveDate" name="driveDate" type="date"
-                  class="form-control" placeholder="Enter drive date">
-                <div *ngIf="driveDate.invalid && driveDate.touched">
-                  <small class="text-danger" *ngIf="driveDate.errors?.['required']">Required</small>
-                </div>
-              </div>
-            </div><br>
-       
+            
+            
             <div class="form-group text-center">
               <input class="btn btn-primary" type="submit" value="Update">
             </div>
